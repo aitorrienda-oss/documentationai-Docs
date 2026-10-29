@@ -1,0 +1,174 @@
+---
+title: Content Structure
+description: Learn how to organize documentation into a clean, scalable structure. This page covers the recommended hierarchy for pages, categories, and reusable content blocks.
+---
+
+## Overview
+
+A strong content structure helps you scale documentation without turning it into a long, hard-to-scan wall of text. For a starter kit like Aitor Rienda, you can treat this page as a reusable blueprint that you adapt as your project grows.
+
+This guide focuses on five core ideas: page hierarchy, section organization, naming conventions, content grouping, and reusable templates. Use them together so your documentation stays consistent for both first-time readers and returning contributors.
+
+<Callout kind="tip">
+Keep each page focused on one primary topic. If a page starts covering too many tasks, split it into smaller pages and link them together.
+</Callout>
+
+## Recommended hierarchy
+
+Use a predictable hierarchy so readers always know where to look first. Start with a clear overview, then move into grouped sections, and finish with practical examples or links to related pages.
+
+<Columns cols={3}>
+  <Card title="Page" icon="book-open" href="#overview">
+    A single documentation page with one clear purpose.
+  </Card>
+  <Card title="Section" icon="chevron-right" href="#section-organization">
+    A logical grouping inside a page that breaks content into themes.
+  </Card>
+  <Card title="Reusable block" icon="code" href="#reusable-templates">
+    A repeated pattern such as a callout, example, or checklist.
+  </Card>
+</Columns>
+
+### Suggested order
+
+1. Start with a short overview that explains what the page covers.
+2. Add one or more sections that group related ideas.
+3. Include examples so readers can apply the structure immediately.
+4. End with best practices or next steps.
+
+## Section organization
+
+Organize sections from broad to specific. That pattern helps readers understand the topic quickly and prevents important details from getting buried.
+
+Use section titles that describe outcomes, not internal jargon. For example, prefer “Naming conventions” over “Rules and formatting notes.” If a section has multiple parts, break it into smaller subsections with clear H3 headings.
+
+<Tabs>
+  <Tab title="Good structure" icon="check-circle">
+    ## Introduction
+
+    ## Core concepts
+
+    ### Page hierarchy
+
+    ### Naming conventions
+
+    ## Examples
+
+    ## Next steps
+  </Tab>
+  <Tab title="Weak structure" icon="x-circle">
+    ## Stuff
+
+    ### Random note
+
+    ## More stuff
+
+    ### Details
+
+    ## Final thoughts
+  </Tab>
+</Tabs>
+
+## Naming conventions
+
+Consistent naming helps you find content quickly and makes your documentation easier to maintain. Use names that are short, descriptive, and easy to scan in navigation menus.
+
+### Page names
+
+Choose names that describe the purpose of the page. For example, use `Content Structure`, `Quickstart`, or `Authentication` instead of vague labels like `Notes` or `Misc`.
+
+### Section names
+
+Use plain language and prefer nouns over verbs when possible. A section titled `Reusable templates` is easier to understand than `Build reusable things`.
+
+### File names
+
+Keep file names lowercase and hyphenated. That makes them easy to read in source control and reduces confusion when your project grows.
+
+## Content grouping
+
+Group content by audience, task, or lifecycle stage. The right grouping depends on what your readers need most. If your audience is new, group by task. If your content is reference-heavy, group by feature or subsystem.
+
+<CodeGroup tabs="MDX,JSON">
+  ```mdx
+  ## Documentation map
+
+  - Introduction
+  - Quickstart
+  - Guide pages
+  - Reference pages
+  - Changelog
+  ```
+
+  ```json
+  {
+    "pages": [
+      "Introduction",
+      "Quickstart",
+      "Guide pages",
+      "Reference pages",
+      "Changelog"
+    ]
+  }
+  ```
+</CodeGroup>
+
+### Practical grouping rules
+
+- Keep related topics close together.
+- Avoid mixing conceptual content and deep reference details in the same section.
+- Use one page for one user goal whenever possible.
+- Reuse the same structure across similar pages so readers know what to expect.
+
+<Steps>
+  <Step title="Define the page goal" icon="target">
+    Decide what the reader should learn or complete before you write anything else.
+  </Step>
+  <Step title="Create the major sections" icon="layout">
+    Add only the sections that support that goal, then order them from general to specific.
+  </Step>
+  <Step title="Add reusable blocks" icon="copy">
+    Reuse the same callouts, examples, and formatting patterns across pages to keep the experience consistent.
+  </Step>
+  <Step title="Review the flow" icon="check-circle">
+    Read the page from top to bottom and confirm that each section naturally leads to the next one.
+  </Step>
+</Steps>
+
+## Reusable templates
+
+Templates save time and help you keep your documentation consistent. You can reuse the same structure for tutorials, references, release notes, and FAQs.
+
+### Example template types
+
+| Template type | Best use | What to include |
+| --- | --- | --- |
+| Guide template | Tutorials and walkthroughs | Overview, steps, example, next steps |
+| Reference template | API or settings docs | Field descriptions, examples, constraints |
+| FAQ template | Common questions | Short answer, expanded details, links |
+| Changelog template | Release updates | Version, date, summary, notable changes |
+
+### Starter kit pattern
+
+Use a simple template when you are unsure how to begin:
+
+1. State the purpose of the page.
+2. Group the content into sections.
+3. Show one realistic example.
+4. Add a short summary or next step.
+
+<Expandable title="Advanced structuring tips" default-open="false">
+  
+Use a separate page when a section becomes long enough to need its own table of contents. You can also create a lightweight parent page that links to child pages for related topics.
+
+If you document multiple audiences, consider one shared overview page and separate detail pages for each audience. That approach reduces duplication while keeping the content targeted.
+
+</Expandable>
+
+## Final guidance
+
+A clean structure does more than make pages look organized. It reduces cognitive load, speeds up navigation, and makes future updates much easier. When you build documentation for Aitor Rienda or any other product, keep the structure simple enough to reuse and flexible enough to grow.
+
+<Callout kind="info">
+If you are building a starter kit, design the structure to be easy to edit first. You can always add depth later without changing the core hierarchy.
+</Callout>
